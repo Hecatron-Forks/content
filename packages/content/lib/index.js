@@ -1,9 +1,11 @@
+import { resolvePath } from '@nuxt/kit'
 const { join, resolve } = require('path')
 const fs = require('graceful-fs').promises
 const mkdirp = require('mkdirp')
 const defu = require('defu')
 const logger = require('consola').withScope('@nuxt/content')
 const hash = require('hasha')
+const nuxtkit = ('@nuxt/kit')
 
 const middleware = require('./middleware')
 const Database = require('./database')
@@ -55,7 +57,7 @@ module.exports = async function (moduleOptions) {
   const relativeDir = options.dir
   options.dir = resolve(this.options.srcDir, options.dir)
 
-  processMarkdownOptions(options, this.nuxt.resolver.resolvePath)
+  processMarkdownOptions(options, nuxtkit.resolvePath)
 
   options.apiPrefixWithBase = options.apiPrefix
   if (this.options.router.base) {

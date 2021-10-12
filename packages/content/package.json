@@ -14,6 +14,7 @@
   "dependencies": {
     "@lokidb/full-text-search": "^2.1.0",
     "@lokidb/loki": "^2.1.0",
+    "@nuxt/kit-edge": "^3.0.0-27234503.d5127e9",
     "@nuxt/types": "^2.15.2",
     "@types/js-yaml": "^4.0.0",
     "@types/xml2js": "^0.4.8",
